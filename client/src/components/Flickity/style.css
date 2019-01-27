@@ -1,0 +1,22 @@
+.main {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 300px;
+  right: 0;
+}
+
+.selector-wrappper {
+  display: flex;
+  width: 100vw;
+  flex-flow: column;
+}
+
+.flickity-button {
+  visibility: hidden;
+}
+
+.is-selected > .inner {
+  height: 100% !important;
+  transition: ease 1s;
+}
