@@ -94,7 +94,7 @@ exports.getAllKeys = function() {
 //Retrieves objects from Amazon s3
 //check http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getObject-property to configure params properties
 //eg var params = {Bucket: 'bucketname', Key:'keyname'}
-exports.getObjects = async function (keys, res) {
+exports.getObjects = function (keys, res) {
     console.log("s3.js ENTERING GET OBJECTS", keys)
 
     await keys.forEach(key => {
@@ -142,7 +142,7 @@ exports.uploadFile = function (req, res) {
     })
 }
 
-exports.listAllObjectsFromS3Bucket = async function(bucket, prefix) {
+exports.listAllObjectsFromS3Bucket = function(bucket, prefix) {
   let items = [];
   let isTruncated = true;
   let marker;
