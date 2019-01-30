@@ -76,7 +76,7 @@ exports.getExifData = function(img) {
   return info
 }
 
-exports.getAllKeys = async function() {
+exports.getAllKeys = function() {
     var allKeys = []
     s3.listObjectsV2(params = { Bucket: 'kylestravelpictures'}, function(err, data) {
       if (err) console.log(err, err.stack);
